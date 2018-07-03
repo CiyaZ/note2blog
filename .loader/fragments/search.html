@@ -1,0 +1,26 @@
+<div class="card  light-green lighten-5 hoverable">
+	<div class="card-content">
+		<form id="search_form">
+			<div class="input-field">
+				<input id="search_input" type="search" required pattern=".*/.*/.*">
+				<label class="label-icon" for="search_input">
+					<i class="material-icons">search</i>
+				</label>
+				<i class="material-icons">close</i>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="card light-green lighten-5 hoverable">
+	<div class="card-content purple-text text-darken-4">
+		该搜索只用于快速精确定位，输入格式"&lt;笔记本&gt;/&lt;子目录&gt;/&lt;笔记&gt;"。
+	</div>
+</div>
+<script>
+	$("#search_form").submit(function ()
+	{
+		var search_strings = $("#search_input").val().split("/");
+		load_directory(search_strings[0], search_strings[1], search_strings[2]);
+		return false;
+	});
+</script>
