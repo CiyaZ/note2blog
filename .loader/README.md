@@ -30,7 +30,7 @@
 python3 blog_indexer.py
 ```
 
-然后push到git pages的仓库就行了
+然后push到git pages的仓库就行了，浏览器访问时会加载`index.html`，以及加载`.loader`中的前端程序到浏览器中，浏览笔记时，会通过ajax加载`indxed.json`在浏览器内存中生成笔记的索引，以及加载对应的`markdown`笔记通过`marked.js`和`highlight.js`进行渲染。
 
 ## 定制
 
