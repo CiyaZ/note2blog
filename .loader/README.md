@@ -42,3 +42,7 @@ python3 blog_indexer.py
 * `blog_indexer.py` 生成索引的脚本
 * `CNAME` 绑定域名
 * `indexer-config.json` 指定哪些笔记本要加载到博客
+
+## 使用Nginx
+
+在`sites-availables`中配置`server`的`root`属性到笔记存放的目录，然后在`sites-enabled`中创建软链接即可。
