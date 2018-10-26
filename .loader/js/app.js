@@ -49,7 +49,7 @@ $(document).ready(function ()
 			var arg0_target = targets[1];
 			var arg1_target = targets[2];
 			var arg2_target = targets[3];
-			console.log(targets);
+			// console.log(targets);
 
 			if (base_target === "")
 			{
