@@ -112,9 +112,6 @@ function load_home()
 //加载"我"页面
 function load_me()
 {
-	//将“我”页面临时替换为个人简历
-	// window.location.href = "../fragments/resume.html";
-
 	var content = $("#content");
 	content.empty();
 	$.get(".loader/fragments/me.html", function (result)
