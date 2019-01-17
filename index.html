@@ -57,10 +57,21 @@
 <script>
 	//侧滑菜单bug修复
 	//小屏幕情况下,侧滑菜单滑出后,半透明的遮罩div会挡住菜单,原因暂时不明,这里直接延时将遮罩删除
+	$(document).ready(function ()
+	{
+		$('.side-nav').children('li').click(function ()
+		{
+			setTimeout(function ()
+			{
+				$('.button-collapse').sideNav('hide');
+			}, 200);
+		});
+	});
 	function delay_repair() {
 		setTimeout(delete_overlay_shadow, 10);
 	}
 	function delete_overlay_shadow() {
-		$("#sidenav-overlay").remove();
+		$('#sidenav-overlay').css('z-index', '1');
+		$('.side-nav').css('z-index', '2');
 	}
 </script>
